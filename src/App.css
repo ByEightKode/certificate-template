@@ -1,38 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Poppins:wght@800&display=swap');
+
+:root {
+  --blue: #0379ff;
+  --light-blue: #9ac9ff;
+  --dark-blue: #0261cc;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: var(--light-blue);
+  background-color: var(--blue);
+  background-size: 160%;
+  background-position: 90% 150%;
+  background-repeat: no-repeat;
+  padding: 2.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+svg {
+  position: absolute;
+  top: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+  position: absolute;
+  top: 12rem;
+  right: 2.5rem;
+  width: 65%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.content * {
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.content h1 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  font-size: 3rem !important;
+  line-height: 1;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content h2 {
+  font-size: 2rem !important;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.byline {
+  position: absolute;
+  right: 2.5rem;
+}
+
+.date {
+  position: absolute;
+  bottom: 3.5rem;
+  font-size: 0.75rem;
+}
+
+.Id {
+  position: absolute;
+  bottom: 2.5rem;
+  font-size: 0.75rem;
+}
+
+.bold {
+  font-weight: 500;
 }

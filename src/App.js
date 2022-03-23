@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+
+import 'minireset.css';
 import './App.css';
 
-function App() {
+function App({name, course, date, cert_id}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <img src='https://phcetstudentportal.mes.ac.in/Login/images/MESLogo.png' />
+      <p className="byline">Certificate of completion</p>
+
+      <div className="content">
+        <p>Awarded to</p>
+        <h1>{name}</h1>
+        <p>for completing:</p>
+        <h2>{course}</h2>
+      </div>
+
+      {date && (
+        <p className="date">
+          Issued on{' '}
+          <span className="bold">{date}</span>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      )}
+
+      <p className="Id">
+        Certificate ID - <span className="bold">{cert_id}</span>
+      </p>
     </div>
   );
 }
+
+App.defaultProps = {
+  name : 'Name Surname',
+  course : 'Creating Dapps using IPFS & Blockchain',
+  date : 'March 22 2022',
+  cert_id : 'AbcDEfgHIjK'
+};
+
 
 export default App;
